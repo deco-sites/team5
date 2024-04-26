@@ -3270,7 +3270,7 @@
           "props": {
             "sort": "price:desc",
             "count": 6,
-            "collection": "139"
+            "collection": "137"
           },
           "crossSelling": "similars",
           "__resolveType": "vtex/loaders/intelligentSearch/productList.ts"
