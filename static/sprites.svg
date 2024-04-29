@@ -414,5 +414,19 @@
 			fill="#DCDCDC" />
 	</symbol>
 
+	<symbol id="IconDynamicSlide" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<g clip-path="url(#clip0_3319_2298)">
+			<path
+				d="M1.41845 11.6991L8.59106 9.09082L11.1993 1.91821C11.4713 1.17017 12.5293 1.17016 12.8013 1.91821L15.4095 9.09082L22.5821 11.6991C23.3302 11.9711 23.3302 13.029 22.5821 13.301L15.4095 15.9093L12.8013 23.0818C12.5293 23.8299 11.4713 23.8299 11.1993 23.0818L8.59106 15.9093L1.41846 13.301C0.670412 13.029 0.670409 11.9711 1.41845 11.6991Z"
+				fill="#C6FF4D" stroke="#C6FF4D" stroke-width="1.71429" stroke-linecap="round"
+				stroke-linejoin="round" />
+		</g>
+		<defs>
+			<clipPath id="clip0_3319_2298">
+				<rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+			</clipPath>
+		</defs>
+	</symbol>
+
 
 </svg>

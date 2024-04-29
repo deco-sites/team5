@@ -13,28 +13,62 @@ export interface Props {
 export default function Slide({
   content = [
     {
-      label: "Label",
       repeat: 30,
-      icon: "ChevronRight",
     },
   ],
 }: Props) {
-  const slideContent = content?.map(({ label, icon, repeat = 1 }) => {
+  const slideContent = content?.map(({ repeat = 1 }) => {
     return (
       <div class="flex items-center gap-x-10 mx-4">
         {Array(repeat).fill(0).map(() => (
           <>
-            <span class="text-sm font-extralight text-base-content whitespace-nowrap">
-              {label}
-            </span>
-            {icon && (
+            <span class="whitespace-nowrap flex gap-[33px] items-center">
+              <span class="text-[26px] font-medium text-[#A352D9]">
+                Beleza
+              </span>
               <Icon
-                id={icon}
-                name={icon}
+                class="inline-block"
+                id="IconDynamicSlide"
                 width={24}
                 height={24}
               />
-            )}
+              <span class="text-[26px] font-medium text-[#C394F2]">
+                Hair
+              </span>
+              <Icon
+                class="inline-block"
+                id="IconDynamicSlide"
+                width={24}
+                height={24}
+              />
+              <span class="text-[26px] font-medium text-[#A352D9]">
+                Skincare
+              </span>
+              <Icon
+                class="inline-block"
+                id="IconDynamicSlide"
+                width={24}
+                height={24}
+              />
+              <span class="text-[26px] font-medium text-[#C394F2]">
+                Hidratação
+              </span>
+              <Icon
+                class="inline-block"
+                id="IconDynamicSlide"
+                width={24}
+                height={24}
+              />
+              <span class="text-[26px] font-medium text-[#A352D9]">
+                Make
+              </span>
+              <Icon
+                class="inline-block"
+                id="IconDynamicSlide"
+                width={24}
+                height={24}
+              />
+            </span>
           </>
         ))}
       </div>
