@@ -112,115 +112,124 @@ export interface Props {
 }
 
 const LAYOUT = {
-  "Primary": "bg-primary text-primary-content",
-  "Secondary": "bg-secondary text-secondary-content",
-  "Accent": "bg-accent text-accent-content",
-  "Base 100": "bg-base-100 text-base-content",
-  "Base 100 inverted": "bg-base-content text-base-100",
-};
 
-function Footer({
-  logo,
-  newsletter = {
-    title: "Newsletter",
-    description: "",
-    form: { placeholder: "", buttonText: "", helpText: "" },
-  },
-  sections = [{
-    "label": "Sobre",
-    "items": [
-      {
-        "href": "/quem-somos",
-        "label": "Quem somos",
-      },
-      {
-        "href": "/termos-de-uso",
-        "label": "Termos de uso",
-      },
-      {
-        "href": "/trabalhe-conosco",
-        "label": "Trabalhe conosco",
-      },
+function Footer() {
+  const lists = [
+    [
+      'Categoria',
+      'Produtos para pele',
+      'Produtos para cabelo',
+      'Unhas',
+      'Make',
+      'OFF',
     ],
-  }, {
-    "label": "Atendimento",
-    "items": [
-      {
-        "href": "/centraldeatendimento",
-        "label": "Central de atendimento",
-      },
-      {
-        "href": "/whatsapp",
-        "label": "Fale conosco pelo WhatsApp",
-      },
-      {
-        "href": "/trocaedevolucao",
-        "label": "Troca e devolução",
-      },
+    ['Institucional', 'Sobre nós', 'Politicas', 'Blog', 'Trabalhe conosco'],
+    [
+      'Ajuda',
+      'Minha conta',
+      'Meus pedidos',
+      'Fale conosco',
+      'Dúvidas frequentes',
     ],
-  }],
-  social = {
-    title: "Redes sociais",
-    items: [{ label: "Instagram", link: "/" }, { label: "Tiktok", link: "/" }],
-  },
-  payments = {
-    title: "Formas de pagamento",
-    items: [{ label: "Mastercard" }, { label: "Visa" }, { label: "Pix" }],
-  },
-  mobileApps = { apple: "/", android: "/" },
-  regionOptions = { currency: [], language: [] },
-  extraLinks = [],
-  backToTheTop,
-  layout = {
-    backgroundColor: "Primary",
-    variation: "Variation 1",
-    hide: {
-      logo: false,
-      newsletter: false,
-      sectionLinks: false,
-      socialLinks: false,
-      paymentMethods: false,
-      mobileApps: false,
-      regionOptions: false,
-      extraLinks: false,
-      backToTheTop: false,
-    },
-  },
-}: Props) {
-  const _logo = layout?.hide?.logo ? <></> : <Logo logo={logo} />;
-  const _newsletter = layout?.hide?.newsletter ? <></> : (
-    <Newsletter
-      content={newsletter}
-      layout={{
-        tiled: layout?.variation == "Variation 4" ||
-          layout?.variation == "Variation 5",
-      }}
-    />
-  );
-  const _sectionLinks = layout?.hide?.sectionLinks ? <></> : (
-    <FooterItems
-      sections={sections}
-      justify={layout?.variation == "Variation 2" ||
-        layout?.variation == "Variation 3"}
-    />
-  );
-  const _social = layout?.hide?.socialLinks
-    ? <></>
-    : <Social content={social} vertical={layout?.variation == "Variation 3"} />;
-  const _payments = layout?.hide?.paymentMethods
-    ? <></>
-    : <PaymentMethods content={payments} />;
-  const _apps = layout?.hide?.mobileApps
-    ? <></>
-    : <MobileApps content={mobileApps} />;
-  const _region = layout?.hide?.regionOptions
-    ? <></>
-    : <RegionSelector content={regionOptions} />;
-  const _links = layout?.hide?.extraLinks
-    ? <></>
-    : <ExtraLinks content={extraLinks} />;
+  ]
 
-  return <div>Testando</div>
+  return (
+    <div className="flex">
+      <div className="w-[64.80%] bg-[#A352D9] px-[60px] py-7 flex flex-col justify-between">
+        <div className="flex gap-x-16">
+          <div className="max-w-[200px]">
+            <div>
+              <Icon
+                id="logo"
+                className="w-full h-16 mb-8"
+              />
+
+              <Icon
+                id="social"
+                className="w-full h-5"
+              />
+            </div>
+
+            <Icon
+              id="paymentMethods"
+              className="w-full h-11 mt-[77px]"
+            />
+          </div>
+
+          <div className="flex gap-x-16">
+            <ul className="flex flex-col gap-y-2.5">
+              {lists[0].map((item) => (
+                <li
+                  key={item}
+                  className="text-white first:text-[#C6FF4D]"
+                >
+                  <a href="/">{item}</a>
+                </li>
+              ))}
+            </ul>
+
+            <ul className="flex flex-col gap-y-2.5">
+              {lists[1].map((item) => (
+                <li
+                  key={item}
+                  className="text-white first:text-[#C6FF4D]"
+                >
+                  <a href="/">{item}</a>
+                </li>
+              ))}
+            </ul>
+
+            <ul className="flex flex-col gap-y-2.5">
+              {lists[2].map((item) => (
+                <li
+                  key={item}
+                  className="text-white first:text-[#C6FF4D]"
+                >
+                  <a href="/">{item}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="flex justify-between item-center">
+          <p className="text-white">
+            © 2023, Beauty Divine - Theme . Powered by{' '}
+            <a
+              href="/"
+              className="underline"
+            >
+              Fast IO
+            </a>
+          </p>
+
+          <Icon
+            id="econverseVtex"
+            className="max-w-28 max-h-4"
+          />
+        </div>
+      </div>
+
+      <div className="w-[35.20%]">
+        <Newsletter
+          content={{
+            title: 'Newsletter',
+            description:
+              'Inscreva-se na nossa newsletter e fique por dentro de tudo!',
+            form: {
+              placeholder: 'E-mail',
+              buttonArrow: true,
+            },
+          }}
+        />
+
+        <img
+          src="https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8317/43eaa486-6184-4a76-b209-26c340b9bd8f"
+          className="w-full object-cover"
+        />
+      </div>
+    </div>
+  )
 }
 
-export default Footer;
+export default Footer

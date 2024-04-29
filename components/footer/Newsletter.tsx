@@ -7,7 +7,7 @@ export interface Form {
   placeholder?: string;
   buttonText?: string;
   /** @format html */
-  helpText?: string;
+  buttonArrow: boolean
 }
 
 export interface Props {
@@ -46,36 +46,52 @@ function Newsletter(
   return (
     <div
       class={clx(
-        "flex flex-col gap-4",
-        tiled && "lg:flex-row lg:w-full lg:justify-between",
+        'flex flex-col gap-5 px-7 py-11  bg-[#C394F2]',
+        tiled && 'lg:flex-row lg:w-full lg:justify-between',
       )}
     >
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-[10px] text-white">
         {content?.title && (
-          <h4 class={tiled ? "text-2xl lg:text-3xl" : "text-lg"}>
+          <h4 class={tiled ? 'text-2xl lg:text-3xl' : 'text-2xl font-semibold'}>
             {content?.title}
           </h4>
         )}
-        {content?.description && <div>{content?.description}</div>}
+        {content?.description && (
+          <div className="text-sm">{content?.description}</div>
+        )}
       </div>
       <div class="flex flex-col gap-4">
         <form
           class="form-control"
           onSubmit={handleSubmit}
         >
-          <div class="flex flex-wrap gap-3">
+          <div class="flex">
             <input
               name="email"
-              class="flex-auto md:flex-none input input-bordered md:w-80 text-base-content"
-              placeholder={content?.form?.placeholder || "Digite seu email"}
+              class="w-full p-3"
+              placeholder={content?.form?.placeholder || 'Digite seu email'}
             />
+            {content.form?.buttonArrow ? (
+              <button
+                type="submit"
+                class="btn disabled:loading max-w-10 w-full p-0"
+                disabled={loading}
+              >
+                <Icon
+                  id="arrow"
+                  width={18}
+                  height={18}
+                />
+              </button>
+            ) : (
             <button
               type="submit"
-              class="btn disabled:loading"
+                class="btn disabled:loading p-0"
               disabled={loading}
             >
-              {content?.form?.buttonText || "Inscrever"}
+                {content?.form?.buttonText || 'Inscrever'}
             </button>
+            )}
           </div>
         </form>
         {content?.form?.helpText && (
@@ -86,7 +102,7 @@ function Newsletter(
         )}
       </div>
     </div>
-  );
+  )
 }
 
 export default Newsletter;
