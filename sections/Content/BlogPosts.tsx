@@ -27,6 +27,7 @@ export interface Post {
   description?: string;
   author?: string;
   date?: string;
+  flag?: string;
 }
 
 function BlogPosts({
@@ -50,6 +51,7 @@ function BlogPosts({
       description: "Description",
       author: "Author",
       date: "Date",
+      flag: "Flag",
     },
     {
       href: "/",
@@ -60,6 +62,7 @@ function BlogPosts({
       description: "Description",
       author: "Author",
       date: "Date",
+      flag: "Flag",
     },
     {
       href: "/",
@@ -70,6 +73,7 @@ function BlogPosts({
       description: "Description",
       author: "Author",
       date: "Date",
+      flag: "Flag",
     },
   ],
 }: Props) {
@@ -95,29 +99,42 @@ function BlogPosts({
   };
 
   const Card = ({ post }: { post: Post }) => (
-    <a href={post.href} class="block px-3">
-      <article class="flex flex-col">
-        <figure class="w-full">
-          <Image
-            class="w-full object-cover"
-            src={post.image}
-            alt={post.alt}
-            width={442}
-            height={266}
-          />
-          <figcaption class="text-2xl mt-4 font-light">{post.label}</figcaption>
-        </figure>
-        <div class="flex flex-col gap-1">
-          <p class="text-base font-light pb-14 pt-2">{post.description}</p>
-          <div class="flex items-center justify-between">
-            <p class="font-light text-xs">
-              {post.author}
+    <div class="flex flex-col">
+      <a href={post.href} class="block px-[20px] relative">
+        <span class="absolute top-[15px] left-[35px] rounded-[100px] bg-[#C394F2] py-[6px] px-[30px] items-center text-center">
+          {post.flag}
+        </span>
+        <article class="flex flex-col">
+          <figure class="w-full">
+            <Image
+              class="w-full object-cover"
+              src={post.image}
+              alt={post.alt}
+              width={442}
+              height={266}
+            />
+            <figcaption class="text-[16px] mt-[20px] font-semibold text-[#1D1D1D]">
+              {post.label}
+            </figcaption>
+          </figure>
+
+          <div class="flex flex-col gap-1">
+            <p class="text-[14px] text-[#757575] mt-[10px] mb-[20px] font-regular">
+              {post.description}
             </p>
-            <p class="font-light text-xs">{post.date}</p>
           </div>
-        </div>
-      </article>
-    </a>
+        </article>
+      </a>
+
+      <div class="flex w-full gap-0 items-center px-[20px]">
+        <p class="font-bold text-[14px] text-[#A352D9] bg-[#F6F6F6] py-[9px] px-[20px] min-w-[140px] rounded-tl-[100px] rounded-bl-[100px]">
+          {post.date}
+        </p>
+        <a class="flex items-center justify-end gap-[20px] font-bold text-[14px] bg-[#C6FF4D] text-[#A352D9] py-[9px] px-[20px] w-full rounded-tr-[100px] rounded-br-[100px] text-right">
+          Leia mais <Icon id="arrowBlog" size={20} />
+        </a>
+      </div>
+    </div>
   );
 
   return (

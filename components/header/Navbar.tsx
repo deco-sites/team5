@@ -16,16 +16,21 @@ import { navbarHeight } from "./constants.ts";
 import { Buttons, Logo } from "../../components/header/Header.tsx";
 
 // Make it sure to render it on the server only. DO NOT render it on an island
-function Navbar(
-  { items, searchbar, logo, buttons, logoPosition = "left", device }: {
-    items: SiteNavigationElement[];
-    searchbar?: SearchbarProps;
-    logo?: Logo;
-    buttons?: Buttons;
-    logoPosition?: "left" | "center";
-    device: "mobile" | "desktop" | "tablet";
-  },
-) {
+function Navbar({
+  items,
+  searchbar,
+  logo,
+  buttons,
+  logoPosition = "left",
+  device,
+}: {
+  items: SiteNavigationElement[];
+  searchbar?: SearchbarProps;
+  logo?: Logo;
+  buttons?: Buttons;
+  logoPosition?: "left" | "center";
+  device: "mobile" | "desktop" | "tablet";
+}) {
   const platform = usePlatform();
 
   // Mobile header
@@ -67,25 +72,17 @@ function Navbar(
 
   // Desktop header
   return (
-    <div class="hidden sm:grid sm:grid-cols-3 items-center border-b border-base-200 w-full px-6">
-      <ul
-        class={`flex gap-6 col-span-1 ${
-          logoPosition === "left" ? "justify-center" : "justify-start"
-        }`}
-      >
-        {items.map((item) => <NavItem item={item} />)}
-      </ul>
+    //141px
+    //600px
+    //405px
+    <div class="w-full h-[90px] max-w-[1320px] flex gap-[87px] mx-auto justify-between">
       <div
-        class={`flex ${
+        class={`flex items-center ${
           logoPosition === "left" ? "justify-start -order-1" : "justify-center"
         }`}
       >
         {logo && (
-          <a
-            href="/"
-            aria-label="Store logo"
-            class="block"
-          >
+          <a href="/" aria-label="Store logo" class="block">
             <Image
               src={logo.src}
               alt={logo.alt}
@@ -95,13 +92,15 @@ function Navbar(
           </a>
         )}
       </div>
-      <div class="flex-none flex items-center justify-end gap-6 col-span-1">
-        {!buttons?.hideSearchButton && (
-          <div class="flex items-center text-xs font-thin gap-1">
-            <SearchButton />SEARCH
-          </div>
-        )}
+      <ul
+        class={`flex gap-[40px] col-span-1 items-center ${
+          logoPosition === "left" ? "justify-center" : "justify-start"
+        }`}
+      >
+        {items.map((item) => <NavItem item={item} />)}
+      </ul>
 
+      <div class="flex-none flex items-center justify-end gap-6 col-span-1">
         <Searchbar searchbar={searchbar} />
         {!buttons?.hideAccountButton && (
           <a
@@ -109,10 +108,9 @@ function Navbar(
             href="/account"
             aria-label="Account"
           >
-            <div class="flex btn btn-circle btn-sm btn-ghost gap-1">
+            <div class="flex btn btn-circle btn-sm btn-ghost gap-1 bg-[#F6F6F6] size-[40px]">
               <Icon id="User" size={20} strokeWidth={0.4} />
             </div>
-            ACCOUNT
           </a>
         )}
         {!buttons?.hideWishlistButton && (
@@ -122,12 +120,11 @@ function Navbar(
             aria-label="Wishlist"
           >
             <button
-              class="flex btn btn-circle btn-sm btn-ghost gap-1"
+              class="flex btn btn-circle btn-sm btn-ghost gap-1 bg-[#F6F6F6] size-[40px]"
               aria-label="Wishlist"
             >
               <Icon id="Heart" size={24} strokeWidth={0.4} />
             </button>
-            WISHLIST
           </a>
         )}
         {!buttons?.hideCartButton && (

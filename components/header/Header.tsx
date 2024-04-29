@@ -84,11 +84,7 @@ function Header({
   return (
     <>
       <header style={{ height: headerHeight }}>
-        <Drawers
-          menu={{ items }}
-          searchbar={searchbar}
-          platform={platform}
-        >
+        <Drawers menu={{ items }} searchbar={searchbar} platform={platform}>
           <div class="bg-base-100 fixed w-full z-50">
             {alerts && alerts.length > 0 && <Alert alerts={alerts} />}
             <Navbar

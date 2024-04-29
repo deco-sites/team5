@@ -3,7 +3,7 @@ import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalytic
 import Image from "apps/website/components/Image.tsx";
 import type { Platform } from "../../apps/site.ts";
 import { SendEventOnClick } from "../../components/Analytics.tsx";
-import Avatar from "../../components/ui/Avatar.tsx";
+// import Avatar from "../../components/ui/Avatar.tsx";
 import {
   default as WishlistButtonVtex,
   default as WishlistButtonWake,
@@ -13,6 +13,8 @@ import { formatPrice } from "../../sdk/format.ts";
 import { relative } from "../../sdk/url.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useVariantPossibilities } from "../../sdk/useVariantPossiblities.ts";
+import { AvailableIcons } from "../../static/adminIcons.ts";
+import Icon from "../ui/Icon.tsx";
 
 interface Props {
   product: Product;
@@ -28,8 +30,8 @@ interface Props {
   platform?: Platform;
 }
 
-const WIDTH = 200;
-const HEIGHT = 279;
+const WIDTH = 315;
+const HEIGHT = 315;
 
 function ProductCard({
   product,
@@ -42,7 +44,7 @@ function ProductCard({
   const id = `product-card-${productID}`;
   const hasVariant = isVariantOf?.hasVariant ?? [];
   const productGroupID = isVariantOf?.productGroupID;
-  const description = product.description || isVariantOf?.description;
+  // const description = product.description || isVariantOf?.description;
   const [front, back] = images ?? [];
   const { listPrice, price, installments } = useOffer(offers);
   const possibilities = useVariantPossibilities(hasVariant, product);
@@ -54,7 +56,7 @@ function ProductCard({
     <div
       id={id}
       data-deco="view-product"
-      class="card card-compact group w-full lg:border lg:border-transparent lg:hover:border-inherit lg:p-4"
+      class="card card-compact group w-full lg:border lg:border-transparent lg:p-4"
     >
       {/* Add click event to dataLayer */}
       <SendEventOnClick
@@ -75,7 +77,7 @@ function ProductCard({
         }}
       />
 
-      <div class="flex flex-col gap-2 lg:group-hover:-translate-y-2">
+      <div class="flex flex-col gap-2">
         <figure
           class="relative overflow-hidden"
           style={{ aspectRatio }}
@@ -83,13 +85,13 @@ function ProductCard({
           {/* Wishlist button */}
           <div
             class={clx(
-              "absolute top-0 left-0",
+              "absolute top-0 left-0 px-[15px] py-[15px]",
               "z-10 w-full",
-              "flex items-center justify-end",
+              "flex items-center justify-between",
             )}
           >
             {/* Discount % */}
-            <div class="text-sm px-3">
+            <div class="text-[12px] leading-[120%] px-3 bg-[#C6FF4D] text-[#A352D9] max-w-[44px] font-bold">
               <span class="font-bold">
                 {listPrice && price
                   ? `${Math.round(((listPrice - price) / listPrice) * 100)}% `
@@ -120,7 +122,7 @@ function ProductCard({
             class={clx(
               "absolute top-0 left-0",
               "grid grid-cols-1 grid-rows-1",
-              "w-full",
+              "w-full bg-[#F1F1F1] rounded-[4px]",
             )}
           >
             <Image
@@ -130,17 +132,21 @@ function ProductCard({
               height={HEIGHT}
               style={{ aspectRatio }}
               class={clx(
+                "rounded-[4px]",
                 "bg-base-100",
                 "object-cover",
                 "rounded w-full",
                 "col-span-full row-span-full",
+                "mix-blend-darken",
+                "transform transition duration-500 hover:scale-110",
               )}
               sizes="(max-width: 640px) 50vw, 20vw"
               preload={preload}
               loading={preload ? "eager" : "lazy"}
               decoding="async"
             />
-            <Image
+            {
+              /* <Image
               src={back?.url ?? front.url!}
               alt={back?.alternateName ?? front.alternateName}
               width={WIDTH}
@@ -156,12 +162,14 @@ function ProductCard({
               sizes="(max-width: 640px) 50vw, 20vw"
               loading="lazy"
               decoding="async"
-            />
+            /> */
+            }
           </a>
         </figure>
 
         {/* SKU Selector */}
-        <ul class="flex items-center justify-center gap-2">
+        {
+          /* <ul class="flex items-center justify-center gap-2">
           {variants
             .map(([value, link]) => [value, relative(link)] as const)
             .map(([value, link]) => (
@@ -178,43 +186,53 @@ function ProductCard({
                 </a>
               </li>
             ))}
-        </ul>
+        </ul> */
+        }
 
         {/* Name/Description */}
         <div class="flex flex-col">
+          <Icon id="starsShelf" width={70} height={14} />
           <h2
-            class="truncate text-base lg:text-lg uppercase"
+            class="truncate capitalize font-medium	text-[15px] mt-[10px]"
             dangerouslySetInnerHTML={{ __html: name ?? "" }}
           />
 
-          <div
+          {
+            /* <div
             class="truncate text-xs"
             dangerouslySetInnerHTML={{ __html: description ?? "" }}
-          />
+          /> */
+          }
         </div>
 
-        {/* Price from/to */}
-        <div class="flex gap-2 items-center justify-end font-light">
-          <span class="line-through text-sm">
-            {formatPrice(listPrice, offers?.priceCurrency)}
-          </span>
-          <span>
-            {formatPrice(price, offers?.priceCurrency)}
-          </span>
+        {/* container shelf price */}
+        <div class="flex items-end gap-[52px]">
+          {/* Price from/to */}
+          <div class="flex flex-col gap-0 items-start	justify-center font-light">
+            <span class="line-through text-[#757575] text-[12px] text-left">
+              {formatPrice(listPrice, offers?.priceCurrency)}
+            </span>
+            <span class="text-[20px] font-bold text-[#A352D9] leading-[150%]">
+              {formatPrice(price, offers?.priceCurrency)}
+            </span>
+
+            {/* Installments */}
+            <span class="justify-start gap-2 font-regular text-[12px] text-[#1D1D1D] truncate">
+              ou {installments}
+            </span>
+          </div>
+
+          {/*Button */}
+          <div class="w-full">
+            <a
+              href={relativeUrl}
+              aria-label="view product"
+              class="btn btn-block rounded-[100px] bg-[#A352D9] text-[#ffffff] text-[14px] leading-[150%] font-bold max-w-[100%] hover:bg-[#A352D9]"
+            >
+              Comprar
+            </a>
+          </div>
         </div>
-
-        {/* Installments */}
-        <span class="flex justify-end gap-2 font-light text-sm truncate">
-          ou {installments}
-        </span>
-
-        <a
-          href={relativeUrl}
-          aria-label="view product"
-          class="btn btn-block"
-        >
-          Ver produto
-        </a>
       </div>
     </div>
   );

@@ -46,7 +46,19 @@ export type AvailableIcons =
   | "AlertSuccess"
   | "AlertWarning"
   | "AlertError"
-  | "share";
+  | "share"
+  | "arrowBlog"
+  | "starsShelf"
+  | "IconDynamicSlide"
+  | "freeShipping"
+  | "truck"
+  | "creditCard"
+  | "share"
+  | "arrow"
+  | "social"
+  | "logo"
+  | "paymentMethods"
+  | "econverseVtex";
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {
   /**
@@ -58,9 +70,14 @@ interface Props extends JSX.SVGAttributes<SVGSVGElement> {
   size?: number;
 }
 
-function Icon(
-  { id, strokeWidth = 16, size, width, height, ...otherProps }: Props,
-) {
+function Icon({
+  id,
+  strokeWidth = 16,
+  size,
+  width,
+  height,
+  ...otherProps
+}: Props) {
   return (
     <svg
       {...otherProps}

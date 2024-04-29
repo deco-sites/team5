@@ -1,5 +1,4 @@
 import Icon, { AvailableIcons } from "../../components/ui/Icon.tsx";
-import Header from "../../components/ui/SectionHeader.tsx";
 
 interface Benefit {
   label: string;
@@ -27,25 +26,27 @@ export interface Props {
   };
 }
 
-export default function Benefits(
-  props: Props,
-) {
+export default function Benefits(props: Props) {
   const {
     title = "Benefits",
     description = "Check out the benefits",
-    benefits = [{
-      icon: "Truck",
-      label: "Entrega em todo Brasil",
-      description: "Consulte o prazo no fechamento da compra.",
-    }, {
-      icon: "Discount",
-      label: "15% na primeira compra",
-      description: "Aplicado direto na sacola de compras.",
-    }, {
-      icon: "ArrowsPointingOut",
-      label: "Devolução grátis",
-      description: "Veja as condições para devolver seu produto.",
-    }],
+    benefits = [
+      {
+        icon: "Truck",
+        label: "Entrega em todo Brasil",
+        description: "Consulte o prazo no fechamento da compra.",
+      },
+      {
+        icon: "Discount",
+        label: "15% na primeira compra",
+        description: "Aplicado direto na sacola de compras.",
+      },
+      {
+        icon: "ArrowsPointingOut",
+        label: "Devolução grátis",
+        description: "Veja as condições para devolver seu produto.",
+      },
+    ],
     layout,
   } = props;
 
@@ -64,37 +65,32 @@ export default function Benefits(
           benefitLayout == "piledup" ? "flex-col items-center text-center" : ""
         } ${
           showDivider && benefitLayout !== "piledup"
-            ? "border-b border-neutral-300"
+            ? "border-b border-[#A352D9]"
             : ""
-        } ${showDivider ? "pb-4 lg:pr-8 lg:border-r lg:border-b-0" : ""} ${
+        } ${showDivider ? "pb-4 lg:border-r lg:border-b-0" : ""} ${
           showDivider && !reverse ? "lg:pb-0" : ""
+        } ${
+          index === 0
+            ? "pr-[100px]"
+            : index === benefits.length - 1
+            ? "pl-[100px]"
+            : "px-[100px]"
         }`}
       >
-        <div class="flex-none">
+        <div class="flex-auto flex flex-col justify-center align-center max-w-fit">
           <Icon
             id={benefit.icon}
             class={"text-base-content"}
-            width={36}
-            height={36}
+            width={16}
+            height={16}
             strokeWidth={0.01}
             fill="currentColor"
           />
         </div>
-        <div class="flex-auto flex flex-col gap-1 lg:gap-2">
-          <div
-            class={`text-base lg:text-xl leading-7 ${
-              reverse ? "text-base-100" : "text-base-content"
-            }`}
-          >
+        <div class="flex-auto flex flex-col justify-center align-center max-w-fit">
+          <div class="text-[#A352D9] font-bold text-[14px]">
             {benefit.label}
           </div>
-          <p
-            class={`text-sm leading-5 ${
-              reverse ? "text-base-100" : "text-neutral"
-            } ${benefitLayout == "piledup" ? "hidden lg:block" : ""}`}
-          >
-            {benefit.description}
-          </p>
         </div>
       </div>
     );
@@ -104,45 +100,26 @@ export default function Benefits(
     <>
       {!layout?.variation || layout?.variation === "Simple"
         ? (
-          <div class="w-full container px-4 py-8 flex flex-col gap-8 lg:gap-10 lg:py-10 lg:px-0">
-            <Header
-              title={title}
-              description={description}
-              alignment={layout?.headerAlignment || "center"}
-            />
-            <div class="w-full flex justify-center">
-              <div class="flex flex-col gap-4 lg:gap-8 w-full lg:grid grid-flow-col auto-cols-fr">
-                {listOfBenefits}
-              </div>
+          <div class="w-full flex flex-col gap-8 bg-[#C6FF4D] h-[50px] justify-center">
+            <div class="flex justify-center w-[1008px] mx-auto">
+              <div class="flex">{listOfBenefits}</div>
             </div>
           </div>
         )
-        : ""}
+        : (
+          ""
+        )}
       {layout?.variation === "With border" && (
-        <div class="w-full container flex flex-col px-4 py-8 gap-8 lg:gap-10 lg:py-10 lg:px-0">
-          <Header
-            title={title}
-            description={description}
-            alignment={layout?.headerAlignment || "center"}
-          />
-          <div class="w-full flex justify-center">
-            <div class="grid grid-cols-2 gap-4 w-full py-6 px-4 border border-base-300 lg:gap-8 lg:grid-flow-col lg:auto-cols-fr lg:p-10">
-              {listOfBenefits}
-            </div>
+        <div class="w-full container flex flex-col px-4 py-8 gap-8 lg:gap-10 lg:py-10 lg:px-0 bg-[#C6FF4D] h-[50px] justify-center">
+          <div class="w-[1008px] flex justify-center mx-auto">
+            <div class="flex">{listOfBenefits}</div>
           </div>
         </div>
       )}
       {layout?.variation === "Color reverse" && (
-        <div class="w-full container flex flex-col px-4 py-8 gap-8 lg:gap-10 lg:py-10 lg:px-0">
-          <Header
-            title={title}
-            description={description}
-            alignment={layout?.headerAlignment || "center"}
-          />
-          <div class="w-full flex justify-center">
-            <div class="grid grid-cols-2 gap-4 w-full lg:gap-8 lg:grid-flow-col lg:auto-cols-fr">
-              {listOfBenefits}
-            </div>
+        <div class="w-full container flex flex-col px-4 py-8 gap-8 lg:gap-10 lg:py-10 lg:px-0 bg-[#C6FF4D] h-[50px] justify-center">
+          <div class="w-[1008px] flex justify-center mx-auto">
+            <div class="flex">{listOfBenefits}</div>
           </div>
         </div>
       )}

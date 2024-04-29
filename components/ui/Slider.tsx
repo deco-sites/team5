@@ -1,15 +1,20 @@
 import type { ComponentChildren, JSX } from "preact";
 import { scriptAsDataURI } from "apps/utils/dataURI.ts";
 
-function Dot({ index, children }: {
+function Dot({
+  index,
+  children,
+  className,
+}: {
   index: number;
   children: ComponentChildren;
+  className?: string;
 }) {
   return (
     <button
       data-dot={index}
       aria-label={`go to slider item ${index}`}
-      class="focus:outline-none group"
+      class={["focus:outline-none group", className].join(" ")}
     >
       {children}
     </button>
@@ -106,10 +111,7 @@ const setup = ({ rootId, scroll, interval, infinite }: Props) => {
       const item = items.item(index);
       const rect = item.getBoundingClientRect();
 
-      const ratio = intersectionX(
-        rect,
-        sliderRect,
-      ) / rect.width;
+      const ratio = intersectionX(rect, sliderRect) / rect.width;
 
       if (ratio > THRESHOLD) {
         indices.push(index);
@@ -219,12 +221,7 @@ const setup = ({ rootId, scroll, interval, infinite }: Props) => {
   };
 };
 
-function JS({
-  rootId,
-  scroll = "smooth",
-  interval,
-  infinite = false,
-}: Props) {
+function JS({ rootId, scroll = "smooth", interval, infinite = false }: Props) {
   return (
     <script
       src={scriptAsDataURI(setup, { rootId, scroll, interval, infinite })}

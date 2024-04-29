@@ -28,11 +28,10 @@ function Header(props: Props) {
               (
                 <h1
                   class={clx(
-                    "text-2xl font-light leading-8 lg:leading-10",
+                    "text-[28px] font-semibold leading-[120%] text-[#1D1D1D] ml-[85px]",
                     props.colorReverse
                       ? "text-primary-content"
                       : "text-base-content",
-                    fontSizeClasses[props.fontSize || "Normal"],
                   )}
                 >
                   {props.title}
