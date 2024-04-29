@@ -84,32 +84,28 @@
   "Benefits - 03": {
     "title": "Take a look at our benefits ",
     "layout": {
-      "variation": "With border",
+      "variation": "Simple",
       "headerAlignment": "center"
     },
     "benefits": [
       {
-        "icon": "Truck",
-        "label": "Free Shipping Worldwide",
+        "icon": "freeShipping",
+        "label": "Frete grátis acima de R$150",
         "description": "Shop online with no additional fees!"
       },
       {
-        "icon": "Phone",
-        "label": "24/7 Online Support",
-        "description": "Instant assistance anytime"
+        "icon": "truck",
+        "label": "Entrega expressa",
+        "description": "Entrega expressa"
       },
       {
-        "icon": "Discount",
-        "label": "15% on the first purchase",
-        "description": "Discount for new customers"
-      },
-      {
-        "icon": "ArrowsPointingOut",
-        "label": "Easy Hassle-Free Returns",
-        "description": "Easy and Convenient Return Policy"
+        "icon": "creditCard",
+        "label": "Pague em até 5x sem juros",
+        "description": "Pague em até 5x sem juros"
       }
     ],
-    "__resolveType": "site/sections/Content/Benefits.tsx"
+    "__resolveType": "site/sections/Content/Benefits.tsx",
+    "description": "Check out the benefits"
   },
   "Campaign Timer - 01": {
     "link": {
@@ -3225,13 +3221,7 @@
         ]
       },
       {
-        "__resolveType": "site/sections/Miscellaneous/Slide.tsx",
-        "content": [
-          {
-            "label": "HOT SALE",
-            "repeat": 30
-          }
-        ]
+        "__resolveType": "Benefits - 03"
       },
       {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
@@ -3277,6 +3267,13 @@
       },
       {
         "__resolveType": "site/sections/Product/ProductShelfTabbed.tsx",
+        "layout": {
+          "headerfontSize": "Large",
+          "headerAlignment": "center"
+        },
+        "cardLayout": {
+          "__resolveType": "Product Card Layout - 01"
+        },
         "tabs": [
           {
             "title": "Woman",
@@ -3301,13 +3298,29 @@
             }
           }
         ],
-        "title": "Best Sellers",
-        "layout": {
-          "headerfontSize": "Large",
-          "headerAlignment": "center"
-        },
-        "cardLayout": {
-          "__resolveType": "Product Card Layout - 01"
+        "title": "Best Sellers"
+      },
+      {
+        "__resolveType": "site/sections/Banners/FullImageBanner.tsx",
+        "imageUrl": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8317/3096115c-833f-4238-aaf3-11469758b766",
+        "buttonLink": "/",
+        "title": "t"
+      },
+      {
+        "__resolveType": "site/sections/Category/CategoryGrid.tsx",
+        "list": [
+          {
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8317/4ab7d5fe-f342-4319-a15d-c8ce0899ac56"
+          },
+          {
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8317/6d2e0045-e4a2-4543-82ca-df904e28510c"
+          },
+          {
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8317/0d433815-1104-4737-992e-6550a745810c"
+          }
+        ],
+        "header": {
+          "title": " "
         }
       },
       {
@@ -3316,30 +3329,49 @@
         "posts": [
           {
             "alt": "Item of the Summer",
-            "date": "January 15, 2024",
+            "date": "16/11/2023",
             "href": "/",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/7e80b083-d1ff-480d-b3a3-b744b69402b1",
-            "label": "Item of the Summer",
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8317/99a55acc-a463-4359-a5ad-8c6e04ba6967",
+            "label": "15 truques para fazer um skincare mais organizado e com melhor resultado",
             "author": "deco.cx",
-            "description": "Lorem ipsum dolor sit amet consectetur. Condimentum dolor ultrices commodo et. Blandit vel est sodales tincidunt aliquam tincidunt. "
+            "description": "Lorem ipsum dolor sit amet consectetur. Nec tincidunt amet nunc risus lectus. Ipsum dolor sit amet consectetur...",
+            "flag": "Pele"
           },
           {
             "alt": "Item of the Summer",
-            "date": "January 15, 2024",
+            "date": "16/11/2023",
             "href": "/",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/a3f329d8-795c-4c3b-8049-ede939d599ef",
-            "label": "Item of the Summer",
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8317/070ddaab-b2b4-44c2-850d-8680fd0f17bf",
+            "label": "Skincare para a barba? Saiba como fazer uma boa esfoliação para o seu rosto",
             "author": "deco.cx",
-            "description": "Lorem ipsum dolor sit amet consectetur. Condimentum dolor ultrices commodo et. Blandit vel est sodales tincidunt aliquam tincidunt. "
+            "description": "Lorem ipsum dolor sit amet consectetur. Nec tincidunt amet nunc risus lectus. Ipsum dolor sit amet consectetur...",
+            "flag": "Pele"
           },
           {
             "alt": "Item of the Summer",
-            "date": "January 15, 2024",
+            "date": "16/11/2023",
             "href": "/",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/7e80b083-d1ff-480d-b3a3-b744b69402b1",
-            "label": "Item of the Summer",
+            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8317/876bf85a-4e9c-4bdc-b238-e7165b46a4be",
+            "label": "Como passar a base pode diferenciar sua maquiagem, saiba como fazer o jeito certo",
             "author": "deco.cx",
-            "description": "Lorem ipsum dolor sit amet consectetur.  Condimentum dolor ultrices commodo et. Blandit vel est sodales tincidunt aliquam tincidunt. "
+            "description": "Lorem ipsum dolor sit amet consectetur. Nec tincidunt amet nunc risus lectus. Ipsum dolor sit amet consectetur...",
+            "flag": "Maquiagem"
+          }
+        ]
+      },
+      {
+        "__resolveType": "site/sections/Cards/CustomImageCard.tsx",
+        "imageUrl": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8317/f76b3d21-cbbb-470d-9acb-43e6878f6d53",
+        "buttonLink": "Conheça a Beauty Divine",
+        "title": "Conheça a Beauty Divine",
+        "buttonText": "Descubra"
+      },
+      {
+        "__resolveType": "site/sections/Miscellaneous/Slide.tsx",
+        "content": [
+          {
+            "label": "HOT SALE",
+            "repeat": 30
           }
         ]
       },
