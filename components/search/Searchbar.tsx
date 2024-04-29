@@ -74,26 +74,12 @@ function Searchbar({
   }, [displaySearchPopup.value]);
 
   return (
-    <div
-      class="w-full grid gap-8 px-4 py-6 overflow-y-hidden"
-      style={{ gridTemplateRows: "min-content auto" }}
-    >
+    <div class="w-full grid gap-8 px-4 py-6">
       <form id={id} action={action} class="join">
-        <Button
-          type="submit"
-          class="join-item btn-square"
-          aria-label="Search"
-          for={id}
-          tabIndex={-1}
-        >
-          {loading.value
-            ? <span class="loading loading-spinner loading-xs" />
-            : <Icon id="MagnifyingGlass" size={24} strokeWidth={0.01} />}
-        </Button>
         <input
           ref={searchInputRef}
           id="search-input"
-          class="input input-bordered join-item flex-grow"
+          class="input join-item flex-grow bg-[#F6F6F6] outline-none rounded-s-full h-[40px]"
           name={name}
           onInput={(e) => {
             const value = e.currentTarget.value;
@@ -115,12 +101,17 @@ function Searchbar({
           autocomplete="off"
         />
         <Button
-          type="button"
-          class="join-item btn-ghost btn-square hidden sm:inline-flex"
-          onClick={() => displaySearchPopup.value = false}
-          ariaLabel={displaySearchPopup.value ? "open search" : "search closed"}
+          type="submit"
+          class="join-item btn-square bg-[#F6F6F6] border-0 rounded-e-full size-[40px] min-h-0"
+          aria-label="Search"
+          for={id}
+          tabIndex={-1}
         >
-          <Icon id="XMark" size={24} strokeWidth={2} />
+          {loading.value ? (
+            <span class="loading loading-spinner loading-xs" />
+          ) : (
+            <Icon id="MagnifyingGlass" size={18} strokeWidth={0.01} />
+          )}
         </Button>
       </form>
 
@@ -129,11 +120,7 @@ function Searchbar({
       >
         <div class="gap-4 grid grid-cols-1 sm:grid-rows-1 sm:grid-cols-[150px_1fr]">
           <div class="flex flex-col gap-6">
-            <span
-              class="font-medium text-xl"
-              role="heading"
-              aria-level={3}
-            >
+            <span class="font-medium text-xl" role="heading" aria-level={3}>
               Sugestões
             </span>
             <ul id="search-suggestion" class="flex flex-col gap-6">
@@ -141,11 +128,7 @@ function Searchbar({
                 <li>
                   <a href={`/s?q=${term}`} class="flex gap-4 items-center">
                     <span>
-                      <Icon
-                        id="MagnifyingGlass"
-                        size={24}
-                        strokeWidth={0.01}
-                      />
+                      <Icon id="MagnifyingGlass" size={24} strokeWidth={0.01} />
                     </span>
                     <span dangerouslySetInnerHTML={{ __html: term }} />
                   </a>
@@ -154,11 +137,7 @@ function Searchbar({
             </ul>
           </div>
           <div class="flex flex-col pt-6 md:pt-0 gap-6 overflow-x-hidden">
-            <span
-              class="font-medium text-xl"
-              role="heading"
-              aria-level={3}
-            >
+            <span class="font-medium text-xl" role="heading" aria-level={3}>
               Produtos sugeridos
             </span>
             <Slider class="carousel">

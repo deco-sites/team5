@@ -1,15 +1,20 @@
 import type { ComponentChildren, JSX } from "preact";
 import { scriptAsDataURI } from "apps/utils/dataURI.ts";
 
-function Dot({ index, children }: {
+function Dot({
+  index,
+  children,
+  className,
+}: {
   index: number;
   children: ComponentChildren;
+  className?: string;
 }) {
   return (
     <button
       data-dot={index}
       aria-label={`go to slider item ${index}`}
-      class="focus:outline-none group"
+      class={["focus:outline-none group", className].join(" ")}
     >
       {children}
     </button>
@@ -92,7 +97,7 @@ const setup = ({ rootId, scroll, interval, infinite }: Props) => {
   if (!root || !slider || !items || items.length === 0) {
     console.warn(
       "Missing necessary slider attributes. It will not work as intended. Necessary elements:",
-      { root, slider, items, rootId },
+      { root, slider, items, rootId }
     );
 
     return;
@@ -106,10 +111,7 @@ const setup = ({ rootId, scroll, interval, infinite }: Props) => {
       const item = items.item(index);
       const rect = item.getBoundingClientRect();
 
-      const ratio = intersectionX(
-        rect,
-        sliderRect,
-      ) / rect.width;
+      const ratio = intersectionX(rect, sliderRect) / rect.width;
 
       if (ratio > THRESHOLD) {
         indices.push(index);
@@ -124,7 +126,7 @@ const setup = ({ rootId, scroll, interval, infinite }: Props) => {
 
     if (!isHTMLElement(item)) {
       console.warn(
-        `Element at index ${index} is not an html element. Skipping carousel`,
+        `Element at index ${index} is not an html element. Skipping carousel`
       );
 
       return;
@@ -146,7 +148,7 @@ const setup = ({ rootId, scroll, interval, infinite }: Props) => {
     const pageIndex = Math.floor(indices[indices.length - 1] / itemsPerPage);
 
     goToItem(
-      isShowingFirst ? items.length - 1 : (pageIndex - 1) * itemsPerPage,
+      isShowingFirst ? items.length - 1 : (pageIndex - 1) * itemsPerPage
     );
   };
 
@@ -190,7 +192,7 @@ const setup = ({ rootId, scroll, interval, infinite }: Props) => {
           }
         }
       }),
-    { threshold: THRESHOLD, root: slider },
+    { threshold: THRESHOLD, root: slider }
   );
 
   items.forEach((item) => observer.observe(item));
@@ -219,12 +221,7 @@ const setup = ({ rootId, scroll, interval, infinite }: Props) => {
   };
 };
 
-function JS({
-  rootId,
-  scroll = "smooth",
-  interval,
-  infinite = false,
-}: Props) {
+function JS({ rootId, scroll = "smooth", interval, infinite = false }: Props) {
   return (
     <script
       src={scriptAsDataURI(setup, { rootId, scroll, interval, infinite })}

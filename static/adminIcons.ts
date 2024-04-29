@@ -99,10 +99,6 @@ export const share = `<svg id="share" xmlns="http://www.w3.org/2000/svg" fill="n
 		<path d="M8.7 13.3l6.6 3.4"></path>
     </svg>`;
 
-export const AvailableIcons = { ChevronLeft, ChevronRight, ChevronUp, ChevronDown, QuestionMarkCircle, User, ShoppingCart, Bars3, Heart, MagnifyingGlass, XMark, Plus, Minus, MapPin, Phone, Elos, Mastercards, Visas, Pixs, Instagram, Truck, Discount, Return, CreditCards, Deco, Discord, FilterList, Trash, WhatsApp, ArrowsPointingOut, Star, Ruler, Message, Close, Zoom, Twitter, Facebook, Linkedin, Tiktok, Elo, Diners, Mastercard, Pix, Visa, Alert, AlertInfo, AlertSuccess, AlertWarning, AlertError, share };
-
-// Icons for ButtonGroup widget
-
 export const Left = `<svg id="Left" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.33333 2.5C3.79357 2.5 4.16667 2.8731 4.16667 3.33333V16.6667C4.16667 17.1269 3.79357 17.5 3.33333 17.5C2.8731 17.5 2.5 17.1269 2.5 16.6667V3.33333C2.5 2.8731 2.8731 2.5 3.33333 2.5Z" fill="inherit"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33337 8.33341C8.11236 8.33341 7.9004 8.42121 7.74412 8.57749C7.58784 8.73377 7.50004 8.94573 7.50004 9.16675V10.8334C7.50004 11.0544 7.58784 11.2664 7.74412 11.4227C7.9004 11.579 8.11236 11.6667 8.33337 11.6667H15C15.2211 11.6667 15.433 11.579 15.5893 11.4227C15.7456 11.2664 15.8334 11.0544 15.8334 10.8334V9.16675C15.8334 8.94573 15.7456 8.73377 15.5893 8.57749C15.433 8.42121 15.2211 8.33341 15 8.33341H8.33337ZM6.56561 7.39898C7.03445 6.93014 7.67033 6.66675 8.33337 6.66675H15C15.6631 6.66675 16.299 6.93014 16.7678 7.39898C17.2366 7.86782 17.5 8.50371 17.5 9.16675V10.8334C17.5 11.4965 17.2366 12.1323 16.7678 12.6012C16.299 13.07 15.6631 13.3334 15 13.3334H8.33337C7.67033 13.3334 7.03445 13.07 6.56561 12.6012C6.09677 12.1323 5.83337 11.4965 5.83337 10.8334V9.16675C5.83337 8.50371 6.09677 7.86782 6.56561 7.39898Z" fill="inherit"/>
@@ -161,3 +157,127 @@ export const Lowercase = `<svg id="letter-case-lower" width="20" height="20" vie
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M5.41663 10.8334C4.26603 10.8334 3.33329 11.7661 3.33329 12.9167C3.33329 14.0673 4.26603 15 5.41663 15C6.56722 15 7.49996 14.0673 7.49996 12.9167C7.49996 11.7661 6.56722 10.8334 5.41663 10.8334ZM7.52115 9.81246C6.92111 9.40486 6.19668 9.16669 5.41663 9.16669C3.34556 9.16669 1.66663 10.8456 1.66663 12.9167C1.66663 14.9878 3.34556 16.6667 5.41663 16.6667C6.19668 16.6667 6.92111 16.4285 7.52115 16.0209C7.60624 16.3908 7.93755 16.6667 8.33329 16.6667C8.79353 16.6667 9.16663 16.2936 9.16663 15.8334V10C9.16663 9.53978 8.79353 9.16669 8.33329 9.16669C7.93755 9.16669 7.60624 9.44254 7.52115 9.81246ZM14.5833 10.8334C13.4327 10.8334 12.5 11.7661 12.5 12.9167C12.5 14.0673 13.4327 15 14.5833 15C15.7339 15 16.6666 14.0673 16.6666 12.9167C16.6666 11.7661 15.7339 10.8334 14.5833 10.8334ZM16.6878 9.81246C16.0878 9.40486 15.3633 9.16669 14.5833 9.16669C12.5122 9.16669 10.8333 10.8456 10.8333 12.9167C10.8333 14.9878 12.5122 16.6667 14.5833 16.6667C15.3633 16.6667 16.0878 16.4285 16.6878 16.0209C16.7729 16.3908 17.1042 16.6667 17.5 16.6667C17.9602 16.6667 18.3333 16.2936 18.3333 15.8334V10C18.3333 9.53978 17.9602 9.16669 17.5 9.16669C17.1042 9.16669 16.7729 9.44254 16.6878 9.81246Z" fill="inherit"/>
 	</svg>`;
 
+export const freeShipping = `<svg id="freeShipping" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_475_510)">
+            <path
+                d="M1.71436 5.71436H14.2858V13.7144C14.2858 14.0174 14.1653 14.3082 13.951 14.5225C13.7368 14.7368 13.446 14.8572 13.1429 14.8572H2.85721C2.5541 14.8572 2.26342 14.7368 2.04909 14.5225C1.83477 14.3082 1.71436 14.0174 1.71436 13.7144V5.71436Z"
+                stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+                d="M15.4287 4.57139V2.28568C15.4287 1.6545 14.917 1.14282 14.2858 1.14282H1.71439C1.08321 1.14282 0.571533 1.6545 0.571533 2.28568V4.57139C0.571533 5.20257 1.08321 5.71425 1.71439 5.71425H14.2858C14.917 5.71425 15.4287 5.20257 15.4287 4.57139Z"
+                stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6.28589 9.14282H9.71446" stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </g>
+        <defs>
+            <clipPath id="clip0_475_510">
+                <rect width="16" height="16" fill="white" />
+            </clipPath>
+        </defs>
+    </svg>`;
+export const truck = `<svg id="truck" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_475_503)">
+            <path
+                d="M9.71436 6.28564H13.1429C13.7491 6.28564 14.3305 6.52646 14.7592 6.95512C15.1878 7.38377 15.4286 7.96515 15.4286 8.57136V13.1428H13.7144"
+                stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+                d="M1.71439 13.1429H0.571533V5.14286C0.571533 4.83975 0.691941 4.54906 0.906268 4.33473C1.1206 4.12041 1.41128 4 1.71439 4H8.57153C8.87464 4 9.16533 4.12041 9.37966 4.33473C9.59398 4.54906 9.71439 4.83975 9.71439 5.14286V13.1429"
+                stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M9.14303 13.1428H6.28589" stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path
+                d="M11.7144 15.4285C10.6098 15.4285 9.71436 14.533 9.71436 13.4285C9.71436 12.3239 10.6098 11.4285 11.7144 11.4285C12.8189 11.4285 13.7144 12.3239 13.7144 13.4285C13.7144 14.533 12.8189 15.4285 11.7144 15.4285Z"
+                stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+                d="M4 15.4285C2.89543 15.4285 2 14.533 2 13.4285C2 12.3239 2.89543 11.4285 4 11.4285C5.10457 11.4285 6 12.3239 6 13.4285C6 14.533 5.10457 15.4285 4 15.4285Z"
+                stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+        <defs>
+            <clipPath id="clip0_475_503">
+                <rect width="16" height="16" fill="white" />
+            </clipPath>
+        </defs>
+    </svg>`;
+export const creditCard = `<svg id="creditCard" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_475_515)">
+            <path
+                d="M14.2858 2.57153H1.71439C1.08321 2.57153 0.571533 3.08321 0.571533 3.71439V12.2858C0.571533 12.917 1.08321 13.4287 1.71439 13.4287H14.2858C14.917 13.4287 15.4287 12.917 15.4287 12.2858V3.71439C15.4287 3.08321 14.917 2.57153 14.2858 2.57153Z"
+                stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M0.571533 6.57153H15.4287" stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path d="M10.8572 10.5715H12.5715" stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </g>
+        <defs>
+            <clipPath id="clip0_475_515">
+                <rect width="16" height="16" fill="white" />
+            </clipPath>
+        </defs>
+    </svg>`;
+
+export const AvailableIcons = {
+  ChevronLeft,
+  ChevronRight,
+  ChevronUp,
+  ChevronDown,
+  QuestionMarkCircle,
+  User,
+  ShoppingCart,
+  Bars3,
+  Heart,
+  MagnifyingGlass,
+  XMark,
+  Plus,
+  Minus,
+  MapPin,
+  Phone,
+  Elos,
+  Mastercards,
+  Visas,
+  Pixs,
+  Instagram,
+  Truck,
+  Discount,
+  Return,
+  CreditCards,
+  Deco,
+  Discord,
+  FilterList,
+  Trash,
+  WhatsApp,
+  ArrowsPointingOut,
+  Star,
+  Ruler,
+  Message,
+  Close,
+  Zoom,
+  Twitter,
+  Facebook,
+  Linkedin,
+  Tiktok,
+  Elo,
+  Diners,
+  Mastercard,
+  Pix,
+  Visa,
+  Alert,
+  AlertInfo,
+  AlertSuccess,
+  AlertWarning,
+  AlertError,
+  share,
+  Left,
+  Center,
+  Right,
+  SideToSide,
+  Default,
+  AlignJustified,
+  AlignLeft,
+  AlignCenter,
+  AlignRight,
+  Uppercase,
+  Lettercase,
+  Lowercase,
+  freeShipping,
+  truck,
+  creditCard,
+};

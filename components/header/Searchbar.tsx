@@ -10,26 +10,11 @@ export interface Props {
 }
 
 function SearchbarModal({ searchbar }: Props) {
-  const { displaySearchPopup } = useUI();
-
   if (!searchbar) {
     return null;
   }
 
-  return (
-    <Modal
-      loading="lazy"
-      open={displaySearchPopup.value}
-      onClose={() => displaySearchPopup.value = false}
-    >
-      <div
-        class="absolute top-0 bg-base-100 container"
-        style={{ marginTop: headerHeight }}
-      >
-        <Searchbar {...searchbar} />
-      </div>
-    </Modal>
-  );
+  return <Searchbar {...searchbar} />;
 }
 
 export default SearchbarModal;

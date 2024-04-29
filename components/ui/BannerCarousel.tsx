@@ -19,16 +19,6 @@ export interface Banner {
   mobile: ImageWidget;
   /** @description Image's alt text */
   alt: string;
-  action?: {
-    /** @description when user clicks on the image, go to this link */
-    href: string;
-    /** @description Image text title */
-    title: string;
-    /** @description Image text subtitle */
-    subTitle: string;
-    /** @description Button label */
-    label: string;
-  };
 }
 
 export interface Props {
@@ -58,12 +48,6 @@ const DEFAULT_PROPS = {
   images: [
     {
       alt: "/feminino",
-      action: {
-        title: "New collection",
-        subTitle: "Main title",
-        label: "Explore collection",
-        href: "/",
-      },
       mobile:
         "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/c007e481-b1c6-4122-9761-5c3e554512c1",
       desktop:
@@ -71,12 +55,6 @@ const DEFAULT_PROPS = {
     },
     {
       alt: "/feminino",
-      action: {
-        title: "New collection",
-        subTitle: "Main title",
-        label: "Explore collection",
-        href: "/",
-      },
       mobile:
         "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/c007e481-b1c6-4122-9761-5c3e554512c1",
       desktop:
@@ -84,12 +62,6 @@ const DEFAULT_PROPS = {
     },
     {
       alt: "/feminino",
-      action: {
-        title: "New collection",
-        subTitle: "Main title",
-        label: "Explore collection",
-        href: "/",
-      },
       mobile:
         "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/c007e481-b1c6-4122-9761-5c3e554512c1",
       desktop:
@@ -99,15 +71,16 @@ const DEFAULT_PROPS = {
   preload: true,
 };
 
-function BannerItem(
-  { image, lcp, id }: { image: Banner; lcp?: boolean; id: string },
-) {
-  const {
-    alt,
-    mobile,
-    desktop,
-    action,
-  } = image;
+function BannerItem({
+  image,
+  lcp,
+  id,
+}: {
+  image: Banner;
+  lcp?: boolean;
+  id: string;
+}) {
+  const { alt, mobile, desktop, action } = image;
 
   return (
     <a
@@ -116,22 +89,6 @@ function BannerItem(
       aria-label={action?.label}
       class="relative overflow-y-hidden w-full"
     >
-      {action && (
-        <div class="absolute top-0 md:bottom-0 bottom-1/2 left-0 right-0 sm:right-auto max-w-[407px] flex flex-col justify-end gap-4 px-8 py-12">
-          <span class="text-2xl font-light text-base-100">
-            {action.title}
-          </span>
-          <span class="font-normal text-4xl text-base-100">
-            {action.subTitle}
-          </span>
-          <Button
-            class="bg-base-100 text-sm font-light py-4 px-6 w-fit"
-            aria-label={action.label}
-          >
-            {action.label}
-          </Button>
-        </div>
-      )}
       <Picture preload={lcp}>
         <Source
           media="(max-width: 767px)"
@@ -175,12 +132,12 @@ function Dots({ images, interval = 0 }: Props) {
       <ul class="carousel justify-center col-span-full gap-6 z-10 row-start-4">
         {images?.map((_, index) => (
           <li class="carousel-item">
-            <Slider.Dot index={index}>
+            <Slider.Dot
+              index={index}
+              className="bg-[#E9E9E9] size-[10px] rounded-full disabled:bg-[#C6FF4D]"
+            >
               <div class="py-5">
-                <div
-                  class="w-16 sm:w-20 h-0.5 rounded group-disabled:animate-progress bg-gradient-to-r from-base-100 from-[length:var(--dot-progress)] to-[rgba(255,255,255,0.4)] to-[length:var(--dot-progress)]"
-                  style={{ animationDuration: `${interval}s` }}
-                />
+                <div class="" style={{ animationDuration: `${interval}s` }} />
               </div>
             </Slider.Dot>
           </li>
@@ -194,7 +151,7 @@ function Buttons() {
   return (
     <>
       <div class="flex items-center justify-center z-10 col-start-1 row-start-2">
-        <Slider.PrevButton class="btn btn-circle glass">
+        <Slider.PrevButton class="btn btn-circle bg-[#F6F6F6] border-none">
           <Icon
             class="text-base-100"
             size={24}
@@ -204,7 +161,7 @@ function Buttons() {
         </Slider.PrevButton>
       </div>
       <div class="flex items-center justify-center z-10 col-start-3 row-start-2">
-        <Slider.NextButton class="btn btn-circle glass">
+        <Slider.NextButton class="btn btn-circle bg-[#F6F6F6] border-none">
           <Icon
             class="text-base-100"
             size={24}
@@ -251,7 +208,7 @@ function BannerCarousel(props: Props) {
 
       {props.arrows && <Buttons />}
 
-      {props.dots && <Dots images={images} interval={interval} />}
+      <Dots images={images} interval={interval} />
 
       <Slider.JS rootId={id} interval={interval && interval * 1e3} infinite />
     </div>
