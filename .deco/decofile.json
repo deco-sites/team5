@@ -1593,7 +1593,7 @@
       "height": 16
     },
     "alerts": [
-      "FRETE GRÁTIS para comprar acima de R$150"
+      "<b>FRETE GRÁTIS</b> (&nbsp;para comprar acima de R$150"
     ],
     "navItems": {
       "__resolveType": "navbar"
@@ -1608,7 +1608,8 @@
           "__resolveType": "vtex/loaders/intelligentSearch/suggestions.ts"
         },
         "__resolveType": "resolved"
-      }
+      },
+      "placeholder": "What are you looking for?"
     },
     "suggestions": {
       "products": [],
@@ -3673,5 +3674,8 @@
   },
   "weather": {
     "__resolveType": "decohub/apps/weather.ts"
+  },
+  "Preview site/sections/Content/BlogPosts.tsx": {
+    "__resolveType": "site/sections/Content/BlogPosts.tsx"
   }
 }
