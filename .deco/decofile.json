@@ -1593,7 +1593,7 @@
       "height": 16
     },
     "alerts": [
-      "Use this template to create your store at deco.cx"
+      "FRETE GRÁTIS para comprar acima de R$150"
     ],
     "navItems": {
       "__resolveType": "navbar"
@@ -1608,8 +1608,7 @@
           "__resolveType": "vtex/loaders/intelligentSearch/suggestions.ts"
         },
         "__resolveType": "resolved"
-      },
-      "placeholder": "What are you looking for?"
+      }
     },
     "suggestions": {
       "products": [],
