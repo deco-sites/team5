@@ -29,8 +29,8 @@ function ButtonCommon({
   return (
     <Button
       class={variant === "icon"
-        ? "btn-circle btn-ghost gap-2"
-        : "btn-primary btn-outline gap-2"}
+        ? "btn-circle btn-ghost gap-2 bg-[#F6F6F6]"
+        : "btn-primary btn-outline gap-2 bg-[#F6F6F6]"}
       loading={fetching.value}
       aria-label="Add to wishlist"
       onClick={async (e) => {
