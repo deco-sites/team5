@@ -55,10 +55,10 @@ function ProductShelf({
   return (
     <div class="w-full container py-8 flex flex-col gap-6 lg:py-10">
       <Header
-        title={title || ""}
+        title={title || "Lançamentos"}
         description={description || ""}
         fontSize={layout?.headerfontSize || "Large"}
-        alignment={layout?.headerAlignment || "center"}
+        alignment={layout?.headerAlignment || "left"}
       />
 
       <div
@@ -92,12 +92,12 @@ function ProductShelf({
         {layout?.showArrows && (
           <>
             <div class="relative block z-10 col-start-1 row-start-3">
-              <Slider.PrevButton class="absolute w-12 h-12 flex justify-center items-center">
+              <Slider.PrevButton class="absolute w-12 h-12 flex justify-center items-center bg-[#F6F6F6] rounded-[100px]">
                 <Icon size={24} id="ChevronLeft" strokeWidth={3} class="w-5" />
               </Slider.PrevButton>
             </div>
             <div class="relative block z-10 col-start-3 row-start-3">
-              <Slider.NextButton class="absolute w-12 h-12 flex justify-center items-center">
+              <Slider.NextButton class="absolute w-12 h-12 flex justify-center items-center bg-[#F6F6F6] rounded-[100px]">
                 <Icon size={24} id="ChevronRight" strokeWidth={3} />
               </Slider.NextButton>
             </div>
