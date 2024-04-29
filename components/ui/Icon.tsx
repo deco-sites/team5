@@ -52,7 +52,13 @@ export type AvailableIcons =
   | "IconDynamicSlide"
   | "freeShipping"
   | "truck"
-  | "creditCard";
+  | "creditCard"
+  | "share"
+  | "arrow"
+  | "social"
+  | "logo"
+  | "paymentMethods"
+  | "econverseVtex";
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {
   /**
