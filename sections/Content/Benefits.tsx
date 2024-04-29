@@ -53,10 +53,9 @@ export default function Benefits(props: Props) {
   const listOfBenefits = benefits.map((benefit, index) => {
     const showDivider = index < benefits.length - 1;
     const reverse = layout?.variation === "Color reverse";
-    const benefitLayout =
-      !layout?.variation || layout?.variation === "Simple"
-        ? "tiled"
-        : "piledup";
+    const benefitLayout = !layout?.variation || layout?.variation === "Simple"
+      ? "tiled"
+      : "piledup";
 
     return (
       <div
@@ -99,15 +98,17 @@ export default function Benefits(props: Props) {
 
   return (
     <>
-      {!layout?.variation || layout?.variation === "Simple" ? (
-        <div class="w-full flex flex-col gap-8 bg-[#C6FF4D] h-[50px] justify-center">
-          <div class="flex justify-center w-[1008px] mx-auto">
-            <div class="flex">{listOfBenefits}</div>
+      {!layout?.variation || layout?.variation === "Simple"
+        ? (
+          <div class="w-full flex flex-col gap-8 bg-[#C6FF4D] h-[50px] justify-center">
+            <div class="flex justify-center w-[1008px] mx-auto">
+              <div class="flex">{listOfBenefits}</div>
+            </div>
           </div>
-        </div>
-      ) : (
-        ""
-      )}
+        )
+        : (
+          ""
+        )}
       {layout?.variation === "With border" && (
         <div class="w-full container flex flex-col px-4 py-8 gap-8 lg:gap-10 lg:py-10 lg:px-0 bg-[#C6FF4D] h-[50px] justify-center">
           <div class="w-[1008px] flex justify-center mx-auto">
