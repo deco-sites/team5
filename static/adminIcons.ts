@@ -99,10 +99,6 @@ export const share = `<svg id="share" xmlns="http://www.w3.org/2000/svg" fill="n
 		<path d="M8.7 13.3l6.6 3.4"></path>
     </svg>`;
 
-
-
-// Icons for ButtonGroup widget
-
 export const Left = `<svg id="Left" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.33333 2.5C3.79357 2.5 4.16667 2.8731 4.16667 3.33333V16.6667C4.16667 17.1269 3.79357 17.5 3.33333 17.5C2.8731 17.5 2.5 17.1269 2.5 16.6667V3.33333C2.5 2.8731 2.8731 2.5 3.33333 2.5Z" fill="inherit"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33337 8.33341C8.11236 8.33341 7.9004 8.42121 7.74412 8.57749C7.58784 8.73377 7.50004 8.94573 7.50004 9.16675V10.8334C7.50004 11.0544 7.58784 11.2664 7.74412 11.4227C7.9004 11.579 8.11236 11.6667 8.33337 11.6667H15C15.2211 11.6667 15.433 11.579 15.5893 11.4227C15.7456 11.2664 15.8334 11.0544 15.8334 10.8334V9.16675C15.8334 8.94573 15.7456 8.73377 15.5893 8.57749C15.433 8.42121 15.2211 8.33341 15 8.33341H8.33337ZM6.56561 7.39898C7.03445 6.93014 7.67033 6.66675 8.33337 6.66675H15C15.6631 6.66675 16.299 6.93014 16.7678 7.39898C17.2366 7.86782 17.5 8.50371 17.5 9.16675V10.8334C17.5 11.4965 17.2366 12.1323 16.7678 12.6012C16.299 13.07 15.6631 13.3334 15 13.3334H8.33337C7.67033 13.3334 7.03445 13.07 6.56561 12.6012C6.09677 12.1323 5.83337 11.4965 5.83337 10.8334V9.16675C5.83337 8.50371 6.09677 7.86782 6.56561 7.39898Z" fill="inherit"/>
@@ -166,4 +162,158 @@ export const arrowBlog = `<svg id="arrowBlog" viewBox="0 0 18 18" fill="none" xm
 			<path d="M9 3.75L14.25 9L9 14.25" stroke="#A352D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 		</svg>`;
 
-export const AvailableIcons = { ChevronLeft, ChevronRight, ChevronUp, ChevronDown, QuestionMarkCircle, User, ShoppingCart, Bars3, Heart, MagnifyingGlass, XMark, Plus, Minus, MapPin, Phone, Elos, Mastercards, Visas, Pixs, Instagram, Truck, Discount, Return, CreditCards, Deco, Discord, FilterList, Trash, WhatsApp, ArrowsPointingOut, Star, Ruler, Message, Close, Zoom, Twitter, Facebook, Linkedin, Tiktok, Elo, Diners, Mastercard, Pix, Visa, Alert, AlertInfo, AlertSuccess, AlertWarning, AlertError, share, Left, Center, Right, SideToSide, Default, AlignJustified, AlignLeft, AlignCenter, AlignRight, Uppercase, Lettercase, Lowercase, arrowBlog };
+export const freeShipping = `<svg id="freeShipping" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_475_510)">
+            <path
+                d="M1.71436 5.71436H14.2858V13.7144C14.2858 14.0174 14.1653 14.3082 13.951 14.5225C13.7368 14.7368 13.446 14.8572 13.1429 14.8572H2.85721C2.5541 14.8572 2.26342 14.7368 2.04909 14.5225C1.83477 14.3082 1.71436 14.0174 1.71436 13.7144V5.71436Z"
+                stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+                d="M15.4287 4.57139V2.28568C15.4287 1.6545 14.917 1.14282 14.2858 1.14282H1.71439C1.08321 1.14282 0.571533 1.6545 0.571533 2.28568V4.57139C0.571533 5.20257 1.08321 5.71425 1.71439 5.71425H14.2858C14.917 5.71425 15.4287 5.20257 15.4287 4.57139Z"
+                stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6.28589 9.14282H9.71446" stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </g>
+        <defs>
+            <clipPath id="clip0_475_510">
+                <rect width="16" height="16" fill="white" />
+            </clipPath>
+        </defs>
+    </svg>`;
+export const truck = `<svg id="truck" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_475_503)">
+            <path
+                d="M9.71436 6.28564H13.1429C13.7491 6.28564 14.3305 6.52646 14.7592 6.95512C15.1878 7.38377 15.4286 7.96515 15.4286 8.57136V13.1428H13.7144"
+                stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+                d="M1.71439 13.1429H0.571533V5.14286C0.571533 4.83975 0.691941 4.54906 0.906268 4.33473C1.1206 4.12041 1.41128 4 1.71439 4H8.57153C8.87464 4 9.16533 4.12041 9.37966 4.33473C9.59398 4.54906 9.71439 4.83975 9.71439 5.14286V13.1429"
+                stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M9.14303 13.1428H6.28589" stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path
+                d="M11.7144 15.4285C10.6098 15.4285 9.71436 14.533 9.71436 13.4285C9.71436 12.3239 10.6098 11.4285 11.7144 11.4285C12.8189 11.4285 13.7144 12.3239 13.7144 13.4285C13.7144 14.533 12.8189 15.4285 11.7144 15.4285Z"
+                stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+                d="M4 15.4285C2.89543 15.4285 2 14.533 2 13.4285C2 12.3239 2.89543 11.4285 4 11.4285C5.10457 11.4285 6 12.3239 6 13.4285C6 14.533 5.10457 15.4285 4 15.4285Z"
+                stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+        <defs>
+            <clipPath id="clip0_475_503">
+                <rect width="16" height="16" fill="white" />
+            </clipPath>
+        </defs>
+    </svg>`;
+
+export const creditCard = `<svg id="creditCard" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_475_515)">
+            <path
+                d="M14.2858 2.57153H1.71439C1.08321 2.57153 0.571533 3.08321 0.571533 3.71439V12.2858C0.571533 12.917 1.08321 13.4287 1.71439 13.4287H14.2858C14.917 13.4287 15.4287 12.917 15.4287 12.2858V3.71439C15.4287 3.08321 14.917 2.57153 14.2858 2.57153Z"
+                stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M0.571533 6.57153H15.4287" stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path d="M10.8572 10.5715H12.5715" stroke="#A352D9" stroke-width="1.71429" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </g>
+        <defs>
+            <clipPath id="clip0_475_515">
+                <rect width="16" height="16" fill="white" />
+            </clipPath>
+        </defs>
+    </svg>`;
+export const starsShelf = `<svg id="starsShelf" viewBox="0 0 70 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M7.00033 1.16675L8.80283 4.81841L12.8337 5.40758L9.91699 8.24841L10.6053 12.2617L7.00033 10.3659L3.39533 12.2617L4.08366 8.24841L1.16699 5.40758L5.19783 4.81841L7.00033 1.16675Z"
+        fill="#C6FF4D" />
+    <path
+        d="M21.0003 1.16675L22.8028 4.81841L26.8337 5.40758L23.917 8.24841L24.6053 12.2617L21.0003 10.3659L17.3953 12.2617L18.0837 8.24841L15.167 5.40758L19.1978 4.81841L21.0003 1.16675Z"
+        fill="#C6FF4D" />
+    <path
+        d="M35.0003 1.16675L36.8028 4.81841L40.8337 5.40758L37.917 8.24841L38.6053 12.2617L35.0003 10.3659L31.3953 12.2617L32.0837 8.24841L29.167 5.40758L33.1978 4.81841L35.0003 1.16675Z"
+        fill="#C6FF4D" />
+    <path
+        d="M49.0003 1.16675L50.8028 4.81841L54.8337 5.40758L51.917 8.24841L52.6053 12.2617L49.0003 10.3659L45.3953 12.2617L46.0837 8.24841L43.167 5.40758L47.1978 4.81841L49.0003 1.16675Z"
+        fill="#DCDCDC" />
+    <path
+        d="M63.0003 1.16675L64.8028 4.81841L68.8337 5.40758L65.917 8.24841L66.6053 12.2617L63.0003 10.3659L59.3953 12.2617L60.0837 8.24841L57.167 5.40758L61.1978 4.81841L63.0003 1.16675Z"
+        fill="#DCDCDC" />
+</svg>`;
+export const IconDynamicSlide = `<svg id="IconDynamicSlide" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_3319_2298)">
+        <path
+            d="M1.41845 11.6991L8.59106 9.09082L11.1993 1.91821C11.4713 1.17017 12.5293 1.17016 12.8013 1.91821L15.4095 9.09082L22.5821 11.6991C23.3302 11.9711 23.3302 13.029 22.5821 13.301L15.4095 15.9093L12.8013 23.0818C12.5293 23.8299 11.4713 23.8299 11.1993 23.0818L8.59106 15.9093L1.41846 13.301C0.670412 13.029 0.670409 11.9711 1.41845 11.6991Z"
+            fill="#C6FF4D" stroke="#C6FF4D" stroke-width="1.71429" stroke-linecap="round"
+            stroke-linejoin="round" />
+    </g>
+    <defs>
+        <clipPath id="clip0_3319_2298">
+            <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+        </clipPath>
+    </defs>
+</svg>`;
+
+export const AvailableIcons = {
+  Alert,
+  AlertError,
+  AlertInfo,
+  AlertSuccess,
+  AlertWarning,
+  AlignCenter,
+  AlignJustified,
+  AlignLeft,
+  AlignRight,
+  arrowBlog,
+  ArrowsPointingOut,
+  Bars3,
+  Center,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  ChevronUp,
+  Close,
+  creditCard,
+  Deco,
+  Default,
+  Diners,
+  Discord,
+  Discount,
+  Elo,
+  Elos,
+  Facebook,
+  FilterList,
+  freeShipping,
+  Heart,
+  Instagram,
+  Left,
+  Lettercase,
+  Linkedin,
+  Lowercase,
+  MagnifyingGlass,
+  MapPin,
+  Mastercard,
+  Mastercards,
+  Message,
+  Minus,
+  Phone,
+  Pix,
+  Pixs,
+  Plus,
+  QuestionMarkCircle,
+  Return,
+  Right,
+  Ruler,
+  share,
+  ShoppingCart,
+  SideToSide,
+  Star,
+  Tiktok,
+  Trash,
+  truck,
+  Truck,
+  Twitter,
+  Uppercase,
+  User,
+  Visa,
+  Visas,
+  WhatsApp,
+  XMark,
+  Zoom,
+};

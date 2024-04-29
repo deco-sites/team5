@@ -34,7 +34,7 @@ function CartButton({ loading, currency, total, items }: Props) {
       </span>
 
       <Button
-        class="btn-circle btn-sm btn-ghost"
+        class="btn-circle btn-sm btn-ghost btn bg-[#F6F6F6] size-[40px]"
         aria-label="open cart"
         data-deco={displayCart.value && "open-cart"}
         loading={loading}
