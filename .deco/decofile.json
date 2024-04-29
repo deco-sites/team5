@@ -436,7 +436,6 @@
     "font": {
       "fonts": [
         {
-          "family": "Poppins",
           "variations": [
             {
               "weight": "400"
@@ -447,7 +446,8 @@
             {
               "weight": "700"
             }
-          ]
+          ],
+          "family": "Montserrat"
         }
       ],
       "__resolveType": "website/loaders/fonts/googleFonts.ts"
