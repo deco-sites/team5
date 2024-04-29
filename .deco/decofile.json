@@ -1588,12 +1588,12 @@
     },
     "logo": {
       "alt": "Glamour logo by deco",
-      "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/986b61d4-3847-4867-93c8-b550cb459cc7",
+      "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8317/8ddc818d-5ac8-472a-904a-d2284356ea24",
       "width": 100,
       "height": 16
     },
     "alerts": [
-      "<b>FRETE GRÁTIS</b> (&nbsp;para comprar acima de R$150"
+      "<b><i>FRETE GRÁTIS</i></b>&nbsp;para comprar acima de&nbsp;<b><i>R$150</i></b>"
     ],
     "navItems": {
       "__resolveType": "navbar"
@@ -1609,7 +1609,7 @@
         },
         "__resolveType": "resolved"
       },
-      "placeholder": "What are you looking for?"
+      "placeholder": "  Buscar..."
     },
     "suggestions": {
       "products": [],
@@ -3145,7 +3145,7 @@
                     "subTitle": "Visit our site and start building now:"
                   },
                   "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/c007e481-b1c6-4122-9761-5c3e554512c1",
-                  "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/d057fc10-5616-4f12-8d4c-201bb47a81f5"
+                  "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8317/5a982b9d-5b3f-4d22-9a2e-1afbd97d6c5e"
                 },
                 {
                   "alt": "Masculino",
@@ -3234,34 +3234,6 @@
         ]
       },
       {
-        "__resolveType": "site/sections/Miscellaneous/CampaignTimer.tsx",
-        "link": {
-          "href": "https://github.com/deco-cx",
-          "text": "Visit our GitHub"
-        },
-        "text": "<p>Design, develop and deliver complete experiences</p>",
-        "labels": {
-          "days": "days",
-          "hours": "hours",
-          "expired": " Expired!",
-          "minutes": "minutes",
-          "seconds": "seconds"
-        },
-        "layout": {
-          "textPosition": "After counter"
-        },
-        "expiresAt": "2024-03-15T17:23:00.000Z"
-      },
-      {
-        "__resolveType": "site/sections/Miscellaneous/Slide.tsx",
-        "content": [
-          {
-            "label": "HOT SALE",
-            "repeat": 30
-          }
-        ]
-      },
-      {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
         "layout": {
           "showArrows": true
@@ -3304,103 +3276,6 @@
         }
       },
       {
-        "__resolveType": "Shoppable Banner - 01"
-      },
-      {
-        "__resolveType": "site/sections/Category/CategoryGrid.tsx",
-        "list": [
-          {
-            "href": "/",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/01c01ba9-ac16-4371-82ca-b93d17545f9c",
-            "label": "Your Collection",
-            "buttonText": "Explore collection"
-          },
-          {
-            "href": "/",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/9b80d57d-64b0-4eef-a3cd-fa8daafaae9c",
-            "label": "Your Collection",
-            "buttonText": "Explore collection"
-          },
-          {
-            "href": "/",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/ed4c0eb3-96ab-484f-b293-e91d196a5063",
-            "label": "Your Collection",
-            "buttonText": "Explore collection"
-          },
-          {
-            "href": "/",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/b9882ff7-3dbc-43e4-9813-5cec23c012cd",
-            "label": "Your Collection",
-            "buttonText": "Explore collection"
-          }
-        ],
-        "header": {
-          "title": "Explore Our Categories"
-        },
-        "layout": {
-          "categoryCard": {
-            "textPosition": "bottom",
-            "textAlignment": "left"
-          }
-        }
-      },
-      {
-        "__resolveType": "site/sections/Product/ShelfWithImage.tsx",
-        "image": {
-          "alt": "Collection Image",
-          "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/165c770b-cbbc-48c0-81ad-c732d527c77c",
-          "href": "/feminino"
-        },
-        "section": {
-          "title": "Summer Vibes",
-          "layout": {
-            "showArrows": true,
-            "headerfontSize": "Normal",
-            "headerAlignment": "center",
-            "numberOfSliders": {
-              "mobile": 1,
-              "desktop": 1
-            }
-          },
-          "products": {
-            "props": {
-              "sort": "price:desc",
-              "count": 3,
-              "query": "camisa"
-            },
-            "__resolveType": "vtex/loaders/intelligentSearch/productList.ts"
-          },
-          "cardLayout": {
-            "layout": {
-              "hide": {
-                "allPrices": false,
-                "favoriteIcon": true,
-                "installments": true,
-                "productDescription": true
-              },
-              "basics": {
-                "oldPriceSize": "Normal",
-                "contentAlignment": "Left"
-              },
-              "onMouseOver": {
-                "card": "None",
-                "image": "Change image",
-                "showCta": true,
-                "showCardShadow": false,
-                "showSkuSelector": true,
-                "showFavoriteIcon": false
-              },
-              "elementsPositions": {
-                "skuSelector": "Bottom",
-                "favoriteIcon": "Top right"
-              }
-            },
-            "__resolveType": "site/loaders/Layouts/ProductCard.tsx"
-          },
-          "__resolveType": "site/sections/Product/ProductShelf.tsx"
-        }
-      },
-      {
         "__resolveType": "site/sections/Product/ProductShelfTabbed.tsx",
         "tabs": [
           {
@@ -3436,8 +3311,8 @@
         }
       },
       {
-        "title": "Blogposts",
         "__resolveType": "site/sections/Content/BlogPosts.tsx",
+        "title": "Blogposts",
         "posts": [
           {
             "alt": "Item of the Summer",
